@@ -1,0 +1,87 @@
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    z-index: 100;
+}
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+.slider_ng {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+.box{
+    display: inline-block;
+}
+.box span{
+    display:block;
+    height: 30px;
+    width:60px;
+    background: #cecece;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 4px;
+}
+.box span b{
+    width:6px;
+    height: 6px;
+    background: #f00;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+}
+.box span b.active{
+    background: blue
+}
+.box div{
+    width: 300px
+}
+
+.tbox{
+    width:500px;
+    height: 300px;
+    background: #f00;
+}
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}

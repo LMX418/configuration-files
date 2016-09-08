@@ -1,0 +1,54 @@
+<div ng-controller="index">
+    <div ng-class="{true:'blue',false:'red'}[isColor]" ng-click="isColor=!isColor">
+        test class
+    </div>
+    <div class="box" ng-repeat="i in languageArr | limitTo:2">
+        {{$index}}
+        <span class="item">{{i.name}}<b ng-class="{true:'active',false:'inactive'}[languageArr[$index].isactive]"></b></span>
+        <div class="txt">
+            <input type="text" ng-model="txtArr" ng-keyup="changeTxt(txtArr,i.id)" />
+        </div>
+    </div>
+    <button ng-click="sub()">
+        提交
+    </button>
+    <div ng-init="ssaj=111222">
+        111{{ssaj}}
+    </div>
+    filter
+
+    {{ [1,1,2,3,4,4] | unique }}
+    {{ "3456789" | number }}<br/>
+
+    {{ "wto" | uppercase }}
+
+    {{ "MONEY" | lowercase }}<br/>
+
+    {{ languageArr | json }}<br/>
+
+    {{ '12' | currency:rmb}}<br/>
+
+    {{ 1469065037643 | date:"MM/dd/yyyy @ h:mma"}}
+    
+    <div ng-init="myArr = [{name:'Tom', age:20}, {name:'Tom Senior', age:50}, {name:'May', age:21}, {name:'Jack', age:20}, {name:'Alice', age:21}]">
+     <div ng-repeat="u in myArr | filter:{age: 21} ">
+         <p>Name:{{u.name}}</p>
+         <p>Age:{{u.age}}</p>
+         <br />
+     </div>
+ </div>
+    <div class="tbox" ng-if="isShow">
+    <select ng-model="selected" ng-options="m.name for m in languageArr">
+        <option value="">==xuanze＝＝</option>
+    </select>
+            
+
+            翻译语言：
+            <div ng-repeat="i in languageArr">
+            {{i.isactive}}
+                <input type="checkbox" ng-checked="!i.isactive" />{{i.name}}
+            </div>
+        </div>
+    </div>
+
+</div>

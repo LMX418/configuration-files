@@ -1,0 +1,31 @@
+{
+  "name": "test-bower",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-respond": "*",
+    "gulp-uglify": "*",
+    "gulp-concat": "*",
+    "gulp-sass":"*",
+    "gulp-ng-annotate":"*",
+    "gulp-ngmin":"*"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.0",
+    "gulp-rev-collector": "^1.0.5",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "description": ""
+}
